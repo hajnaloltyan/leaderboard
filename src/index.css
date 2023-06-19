@@ -1,3 +1,49 @@
-body {
-  background-color: #ddd;
+html {
+  scroll-behavior: smooth;
+}
+
+ul, 
+li,
+h1,
+h2,
+p,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+button {
+  padding: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+::placeholder {
+  color: #000;
+  font-style: italic;
+}
+
+.page {
+  margin: 1% 5%
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 5%;
 }
