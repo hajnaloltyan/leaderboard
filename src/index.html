@@ -11,21 +11,16 @@
     <h1>Leaderboard</h1>
 
     <main class="content">
-      <div class="scores">
+      <div class="recent-scores flex-column">
         <div class="wrapper">
           <h2>Recent scores</h2>
           <button type="button">Refresh</button>
         </div>
 
-        <ul>
-          <li>
-            <p>Name:</p>
-            <p>100</p>
-          </li>
-        </ul>
+        <ul class="scores-table"></ul>
       </div>
 
-      <form class="form">
+      <form class="form flex-column">
         <h2>Add your score</h2>
         <input type="text" name="name" placeholder="Your name" required>
         <input type="text" name="score" placeholder="Your score" required>

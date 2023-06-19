@@ -44,6 +44,12 @@ input {
 
 .content {
   display: flex;
-  align-items: center;
   padding: 5%;
+  gap: 10%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
