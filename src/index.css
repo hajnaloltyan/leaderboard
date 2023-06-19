@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-ul, 
+ul,
 li,
 h1,
 h2,
@@ -39,7 +39,7 @@ input {
 }
 
 .page {
-  margin: 1% 5%
+  margin: 1% 5%;
 }
 
 .content {
@@ -52,4 +52,32 @@ input {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.scores-table {
+  border: 3px solid #000;
+}
+
+.score-details {
+  font-size: 20px;
+  padding: 5px;
+}
+
+.grey-bg {
+  background-color: #ddd;
+}
+
+.refreshBtn {
+  height: 30px;
+}
+
+.submitBtn {
+  width: 60px;
+  align-self: flex-end;
 }
