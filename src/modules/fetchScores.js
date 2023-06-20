@@ -1,4 +1,4 @@
-import getScores from './getScores.js';
+import { getScores } from './handleAPI.js';
 
 const fetchScores = async () => {
   const data = await getScores();

@@ -1,9 +1,10 @@
-const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 const gameID = 'rhMT72YP5yPzTLTnp0XF';
+const fullURL = `${baseURL}/${gameID}/scores/`;
 
 export const getScores = async () => {
   try {
-    const res = await fetch(`${baseURL}games/${gameID}/scores/`, { method: 'GET' });
+    const res = await fetch(fullURL, { method: 'GET' });
     const data = await res.json();
     return data;
   } catch (error) {
@@ -14,16 +15,15 @@ export const getScores = async () => {
   }
 };
 
-export const sendScore = async (id, name, score) => {
+export const sendScore = async (name, score) => {
   try {
-    const res = await fetch(`${baseURL}games/${gameID}/scores/`, {
+    const res = await fetch(fullURL, {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        id: `${id}`,
-        name: `${name}`,
+        user: `${name}`,
         score: `${score}`,
       }),
-      headers: { 'Content-Type': 'application/json' },
     });
 
     if (!res.ok) {
