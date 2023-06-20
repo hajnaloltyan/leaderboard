@@ -22,6 +22,7 @@ h2 {
 
 button {
   padding: 5px;
+  cursor: pointer;
 }
 
 li {

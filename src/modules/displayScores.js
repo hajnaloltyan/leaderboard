@@ -1,4 +1,10 @@
-import scoresData from './scoresData.js';
+import fetchScores from './fetchScores.js';
+
+let scoresData = [];
+
+document.querySelector('.refreshBtn').addEventListener('click', () => {
+  scoresData = fetchScores();
+});
 
 const displayScores = () => {
   const scoresTable = document.querySelector('.scores-table');
