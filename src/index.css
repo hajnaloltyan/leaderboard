@@ -13,16 +13,35 @@ button {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 80px;
+  text-decoration: underline;
+  text-underline-offset: 25px;
+  text-decoration-color: green;
 }
 
 h2 {
   font-size: 40px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  margin-bottom: 3%;
 }
 
 button {
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
+  background-color: rgb(255, 200, 80);
+  border: 2px solid rgb(255, 200, 80);
+  border-radius: 10px;
+  font-weight: 600;
+  color: #01335f;
+  width: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #a5fcba;
+  border: 2px solid #a5fcba;
+  transform: scale(1.2);
 }
 
 li {
@@ -31,16 +50,21 @@ li {
 
 input {
   border: 2px solid #000;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 ::placeholder {
-  color: #000;
   font-style: italic;
+  font-size: 16px;
 }
 
 .page {
-  margin: 1% 5%;
+  margin: 5% 10%;
+  width: 100%;
+  background: #000428;
+  background: linear-gradient(to right, #004e92, #000428);
+  color: rgb(163, 244, 255);
 }
 
 .content {
@@ -55,14 +79,22 @@ input {
   gap: 20px;
 }
 
+.recent-scores {
+  width: 500px;
+}
+
 .wrapper {
   display: flex;
   gap: 40px;
+  justify-content: space-between;
   align-items: center;
 }
 
 .scores-table {
-  border: 3px solid #000;
+  border: 3px solid rgb(163, 244, 255);
+  background-color: #a5fcba;
+  color: #000;
+  border-radius: 10px;
 }
 
 .score-details {
@@ -71,14 +103,13 @@ input {
 }
 
 .score-details:nth-child(even) {
-  background-color: #ddd;
-}
-
-.refreshBtn {
-  height: 30px;
+  background-color: #fff;
 }
 
 .submitBtn {
-  width: 60px;
   align-self: flex-end;
+}
+
+.form {
+  width: 400px;
 }
