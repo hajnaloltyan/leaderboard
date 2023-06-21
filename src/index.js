@@ -9,38 +9,36 @@ const displayScores = () => {
   const scoresTable = document.querySelector('.scores-table');
   scoresTable.innerHTML = '';
 
-  console.log(scoresData);
-
-  if (scoresData !== undefined) {
-    scoresData.forEach(({ id, name, score }) => {
+  if (scoresData !== []) {
+    scoresData.forEach(({ score, user }) => {
       const scoreItem = document.createElement('li');
       scoreItem.classList.add('score-details');
 
-      if (id % 2 === 1) {
-        scoreItem.classList.add('grey-bg');
-      }
-
       scoreItem.innerHTML = `
-        <p>${name}: ${score}</p>
+        <p>${user}: ${score}</p>
       `;
 
       scoresTable.appendChild(scoreItem);
     });
+  } else {
+    scoresTable.innerHTML = 'No scores to show! :(';
   }
-
-  scoresTable.innerHTML = 'No scores to show! :(';
 };
 
-document.querySelector('.refreshBtn').addEventListener('click', () => {
-  scoresData = fetchScores();
+document.querySelector('.refreshBtn').addEventListener('click', async () => {
+  scoresData = await fetchScores();
   displayScores();
 });
 
-document.addEventListener('submit', (e) => {
+document.addEventListener('submit', async (e) => {
   e.preventDefault();
   addNewScore();
   e.target.reset();
-  scoresData = fetchScores();
+  scoresData = await fetchScores();
+  displayScores();
 });
 
-displayScores();
+(async () => {
+  scoresData = await fetchScores();
+  displayScores();
+})();

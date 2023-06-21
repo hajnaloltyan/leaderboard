@@ -70,7 +70,7 @@ input {
   padding: 5px;
 }
 
-.grey-bg {
+.score-details:nth-child(even) {
   background-color: #ddd;
 }
 
